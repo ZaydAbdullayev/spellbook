@@ -1,0 +1,146 @@
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7% 0 0 0;
+  gap: 100px;
+}
+
+.magic-title {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #e9d8ff;
+  text-shadow: 0 0 10px #bf7fff, 0 0 20px #9b5de5;
+  animation: glow 3s ease-in-out infinite alternate;
+  margin-top: 2rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #bf7fff, 0 0 20px #9b5de5;
+  }
+  to {
+    text-shadow: 0 0 20px #d8a7ff, 0 0 40px #c084fc;
+  }
+}
+
+.magic-description {
+  text-align: center;
+  font-family: "Caudex", serif;
+  font-size: 1.2rem;
+  color: #cbb8ec;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+}
+
+.spellbook-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .magic-title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .magic-description {
+    font-size: 1rem;
+    margin: 0 0 2rem;
+  }
+}
+
+.spellbook {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(70, 50, 126, 0.4);
+  background: radial-gradient(circle at center, #24133f, #150c20);
+  font-family: "Caudex", serif;
+  color: #e4d4ff;
+  padding: 2rem;
+}
+
+.left-page {
+  flex: 1;
+  border-right: 1px solid #4b3869;
+  padding-right: 2rem;
+
+  .spell-list {
+    list-style: none;
+    padding: 0;
+
+    .spell-item {
+      font-size: 1.1rem;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+      background: rgba(100, 80, 130, 0.2);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &.active,
+      &:hover {
+        background: rgba(160, 120, 200, 0.4);
+        box-shadow: inset 0 0 10px #bf9df2;
+      }
+    }
+  }
+}
+
+.right-page {
+  flex: 2;
+  padding-left: 2rem;
+
+  .spell-detail {
+    .spell-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff0c1;
+      text-shadow: 0 0 12px #ffeb8a;
+    }
+
+    .spell-name {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .spell-type {
+      font-style: italic;
+      color: #caa8ff;
+      margin-bottom: 1rem;
+    }
+
+    .spell-desc {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e2d4fc;
+    }
+  }
+}
+
+.spell-books-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 6%;
+  color: #bf9df2;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

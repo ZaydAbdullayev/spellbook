@@ -1,0 +1,117 @@
+.spell-button {
+  background: #241c38; /* morumsu gece mavisi */
+  color: #e2ddf7; /* açık büyülü lavanta */
+  border: 2px solid #8b7fd4; /* solgun mor-mavi geçiş tonu */
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px #342a58;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.spell-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(160, 140, 255, 0.2); /* hafif mor-mavi shimmer */
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+.spell-button:hover::before {
+  left: 100%;
+}
+
+.spell-button:hover {
+  box-shadow: 0 0 18px #a795ec, inset 0 0 10px #6d5eb3;
+}
+
+.book-wrapper {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .chain {
+    position: absolute;
+    width: 475px;
+    right: -40px;
+    top: 0;
+    z-index: 99;
+  }
+
+  .chain3{
+    top: 35%;
+  }
+
+  .chain2{
+    filter:  brightness(0.3) contrast(1.2) drop-shadow(0 0 10px #ffffff1e);
+  }
+}
+
+.spell-detail-box {
+  background-image: url("./assets/paper.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 12px 50px 30px;
+  color: #f3e6ff;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 12px 0 0 12px;
+  text-align: center;
+  text-shadow: 0 0 10px #2d1e3a;
+  box-shadow: 0 0 25px #150c20;
+
+  span {
+    font-size: 1.3rem;
+    color: #f3e6ff;
+    text-shadow: 0 0 10px #1a1124;
+  }
+
+  .spell-name {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .spell-type {
+    margin-bottom: 2rem;
+    color: #d8cfff;
+  }
+
+  .spell-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.book-cover {
+  margin-left: -10px;
+  img {
+    width: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(0.9) contrast(1.2);
+  }
+}
+
+.back-book-cover {
+  img {
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(2) contrast(1.4);
+  }
+}
+
+.spell-detail-box:nth-child(even) {
+  border-radius: 0 12px 12px 0;
+  border-left: 3px solid #150c20;
+}
