@@ -54,84 +54,49 @@
   }
 }
 
-.spellbook {
-  display: flex;
-  justify-content: center;
-  max-width: 900px;
-  margin: 3rem auto;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(70, 50, 126, 0.4);
-  background: radial-gradient(circle at center, #24133f, #150c20);
-  font-family: "Caudex", serif;
-  color: #e4d4ff;
-  padding: 2rem;
-}
-
-.left-page {
-  flex: 1;
-  border-right: 1px solid #4b3869;
-  padding-right: 2rem;
-
-  .spell-list {
-    list-style: none;
-    padding: 0;
-
-    .spell-item {
-      font-size: 1.1rem;
-      padding: 0.6rem 1rem;
-      margin-bottom: 0.8rem;
-      cursor: pointer;
-      background: rgba(100, 80, 130, 0.2);
-      border-radius: 8px;
-      transition: all 0.3s ease;
-
-      &.active,
-      &:hover {
-        background: rgba(160, 120, 200, 0.4);
-        box-shadow: inset 0 0 10px #bf9df2;
-      }
-    }
-  }
-}
-
-.right-page {
-  flex: 2;
-  padding-left: 2rem;
-
-  .spell-detail {
-    .spell-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff0c1;
-      text-shadow: 0 0 12px #ffeb8a;
-    }
-
-    .spell-name {
-      font-family: "Cinzel Decorative", serif;
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    .spell-type {
-      font-style: italic;
-      color: #caa8ff;
-      margin-bottom: 1rem;
-    }
-
-    .spell-desc {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #e2d4fc;
-    }
-  }
-}
-
-.spell-books-container{
+.spell-books-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3% 10%;
+  gap: 50px;
   z-index: 99;
+}
+
+.spell-book-prices {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2% 5%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.048);
+
+  .magic-title {
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-align: start;
+
+    span{
+      background: linear-gradient(90deg, #d7a7ff63, #c084fc67);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      color: #e9d8ff;
+      border: 1px solid #b797e0;
+      margin-left: 20px;
+    }
+  }
+
+  .btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
 }
 
 .footer {

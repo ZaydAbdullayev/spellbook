@@ -1,3 +1,8 @@
+import book1 from "../assets/spellbook_cover_corrected_1.png";
+import book2 from "../assets/spellbook_cover_corrected_2.png";
+import book3 from "../assets/spellbook_cover_corrected_3.png";
+import book4 from "../assets/spellbook_cover_corrected_4.png";
+
 export const spells = [
   {
     name: "Cryptobolt",
@@ -126,5 +131,44 @@ export const spells = [
       "Chant a melody that drains tiny fragments of power with each beat.",
     incantation:
       "Let every tick remove their spark—one note at a time, into the dark.",
+  },
+];
+
+export const books = [
+  {
+    id: 1,
+    name: "Book of Shadows",
+    cover: book1,
+    description:
+      "A tome of ancient spells and forgotten incantations, bound in the essence of the blockchain.",
+    spells: spells,
+    status: "active",
+  },
+  {
+    id: 2,
+    name: "Codex of Chains",
+    cover: book2,
+    description:
+      "A codex that binds the secrets of the blockchain, revealing the magic of decentralized power.",
+    spells: [],
+    status: "inactive",
+  },
+  {
+    id: 3,
+    name: "Tome of Transactions",
+    cover: book3,
+    description:
+      "A tome that chronicles the history of transactions, each page a testament to the magic of trade.",
+    spells: [],
+    status: "inactive",
+  },
+  {
+    id: 4,
+    name: "Grimoire of Gas",
+    cover: book4,
+    description:
+      "A grimoire filled with potent spells that harness the energy of gas fees and transaction costs.",
+    spells: [],
+    status: "inactive",
   },
 ];

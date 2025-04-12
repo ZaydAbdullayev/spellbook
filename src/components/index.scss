@@ -34,30 +34,40 @@
 
 .book-wrapper {
   position: relative;
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 
   .chain {
     position: absolute;
     width: 475px;
     right: -40px;
-    top: 0;
+    top: 5px;
     z-index: 99;
   }
 
-  .chain3{
+  .chain3 {
     top: 35%;
+    filter: invert(3%) sepia(200%) saturate(3%) hue-rotate(315deg)
+      brightness(52%) contrast(100%);
   }
 
-  .chain2{
-    filter:  brightness(0.3) contrast(1.2) drop-shadow(0 0 10px #ffffff1e);
+  .chain2 {
+    height: 100%;
+    filter: invert(3%) sepia(200%) saturate(3%) hue-rotate(315deg)
+      brightness(52%) contrast(100%);
   }
 }
 
 .spell-detail-box {
-  background-image: url("./assets/paper.png");
+  position: relative;
+  background-image: url("../assets/paper.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,13 +92,32 @@
   }
 
   .spell-type {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #d8cfff;
   }
 
   .spell-desc {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.3;
+  }
+
+  .spell-inc {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: #d8cfff;
+    text-shadow: 0 0 5px #423552;
+    border: 1px solid #b3a2ff57;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10x);
+    backdrop-filter: blur(10px);
+  }
+
+  button {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
   }
 }
 
@@ -114,4 +143,77 @@
 .spell-detail-box:nth-child(even) {
   border-radius: 0 12px 12px 0;
   border-left: 3px solid #150c20;
+}
+
+.advert-book-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .chain {
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    z-index: 99;
+  }
+
+  &._3 {
+    .chain {
+      width: 93%;
+    }
+  }
+
+  .chain3 {
+    top: 35%;
+    filter: invert(3%) sepia(200%) saturate(3%) hue-rotate(315deg)
+      brightness(52%) contrast(100%);
+  }
+
+  .chain2 {
+    height: 85%;
+    filter: invert(3%) sepia(200%) saturate(3%) hue-rotate(315deg)
+      brightness(52%) contrast(100%);
+  }
+
+  .magic-title {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    border-radius: 15px;
+    background: #ffffff13;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.advert-book-cover {
+  img {
+    width: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: brightness(0.9) contrast(1.2);
+  }
+}
+
+.loader-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
 }

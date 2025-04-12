@@ -1,8 +1,8 @@
 import "./index.scss";
 
-export const Button = ({ text, onclick, ...props }) => {
+export const Button = ({ text, action, ...props }) => {
   return (
-    <button class="spell-button" onClick={onclick} {...props}>
+    <button className="spell-button" onClick={action} {...props}>
       {text}
     </button>
   );
